@@ -1,0 +1,38 @@
+<section class="wciSection">
+  <a href="#"
+  id="wcFetchTrigger"
+     class="action-primary"
+     title="<?= $block->escapeHtmlAttr(__('Fetch Data')) ?>">
+      <span><?= $block->escapeHtml(__('Fetch Data')) ?></span>
+  </a>
+  <a href="#"
+  id="wcSelectAll"
+     class="action-primary"
+     title="<?= $block->escapeHtmlAttr(__('Select All')) ?>">
+      <span><?= $block->escapeHtml(__('Select All')) ?></span>
+  </a>
+  <a href="#"
+  id="wcImportTrigger"
+     class="action-primary"
+     style="display:none"
+     title="<?= $block->escapeHtmlAttr(__('Import Data')) ?>">
+      <span><?= $block->escapeHtml(__('Import Data')) ?></span>
+  </a>
+  <span id="importer-msg"></span>
+</section>
+<script type="text/x-magento-init">
+{
+    "*": {
+        "Hprasetyou_WCImporter/js/wcImporter": {
+            "fetchTriggerEl": "#wcFetchTrigger",
+            "importTrigger": "#wcImportTrigger",
+            "logField": "#wciLog",
+            "tableEl": "#wciProductTable",
+            "tableSelectAll": "#wcSelectAll",
+            "fetchUrl": "<?= /** @noEscape */ $block->getUrl('wcimporter/importer/fetch')?>",
+            "createUrl": "<?= /** @noEscape */ $block->getUrl('wcimporter/importer/create')?>",
+            "msgWrapper": "#importer-msg"
+        }
+    }
+}
+</script>

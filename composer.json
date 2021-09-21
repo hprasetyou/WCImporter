@@ -1,0 +1,7 @@
+{
+  "name": "hprasetyou/wcImporter",
+  "description": "Plugin for importing products from woocommerce to magento 2",
+  "require": {
+    "ext-oauth": "*"
+  }
+}

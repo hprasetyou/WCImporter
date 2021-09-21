@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Hprasetyou_WCImporter::importer"
+          title="WooCommerce Importer" translate="title"
+          module="Hprasetyou_WCImporter"
+          parent="Magento_Backend::system_convert" sortOrder="9"
+          action="wcimporter/importer/index" resource="Magento_Backend::content"/>
+   </menu>
+</config>
