@@ -8,13 +8,13 @@ class WPFetch extends AbstractHelper{
   {
       parent::__construct($context);
       $this->consumerKey = $this->scopeConfig->getValue('hpu_wci/general/consumer_key', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
-      $this->consumerSecret =  $this->scopeConfig->getValue('hpu_wci/general/consumer_secret', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
+      $this->consumerSecret = $this->scopeConfig->getValue('hpu_wci/general/consumer_secret', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
       $this->oauth = new \OAuth($this->consumerKey, $this->consumerSecret);
       $this->curl = curl_init();
   }
 
   function fetchData($reqUrl, $params = []){
-      $baseUrl = "https://triconville.com.my";
+      $baseUrl = $this->scopeConfig->getValue('hpu_wci/general/source_site', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
       $url = $baseUrl . "/wp-json/wc/v3/" . $reqUrl;
       $url .= '?' . http_build_query($params);
       curl_setopt($this->curl, CURLOPT_URL, $url);

@@ -10,6 +10,10 @@
         <resource>Hprasetyou_WCImporter::configuration</resource>
         <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
             <label>General Configuration</label>
+            <field id="source_site" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Source Site</label>
+                <comment>Source site url</comment>
+            </field>
             <field id="consumer_key" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
                 <label>Consumer Key</label>
                 <comment>Consumer Key of Your WooCommerce site</comment>
